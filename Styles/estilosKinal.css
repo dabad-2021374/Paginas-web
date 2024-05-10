@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* hr {
+    width: 70%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: white;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #23376d;
+    font-family: "Rubik", sans-serif;
+    font-size: 48px;
+}
+
+.header {
+    background-color: #16233F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px 10%;
+    margin: 0;
+}
+
+/* Icono del header */
+.header .icono-header {
+    height: 80px;
+    width: auto;
+}
+
+.header .icono-banco {
+    justify-content: right;
+    height: 100px;
+    width: 100px;
+}
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked+.nav .lista {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1000px;
+    /* Ajusta según sea necesario */
+    left: 0;
+    background-color: #16233F;
+    width: 100%;
+}
+
+#toggle:checked+.nav .lista li {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #44688D;
+}
+
+.nav {
+    background-color: transparent;
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has(.dropdown:target) {
+    --img1: scale(0);
+    --img2: scale(1);
+    --clip: inset(0 0 0 0);
+
+}
+
+.nav__container {
+    font-family: rubik-medium, sans-serif;
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    
+    align-items: center;
+}
+
+.nav__title {
+    color: white;
+    grid-area: title;
+}
+
+.nav__menu {
+    grid-area: img;
+    z-index: 10;
+    transform: var(--img1);
+}
+
+.nav__menu--second {
+    transform: var(--img2);
+}
+
+.nav__icon {
+    width: 45px;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: #16233F;
+    width: 75%;
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1em;
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    overflow-y: auto;
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path .10s;
+}
+
+.dropdown__link {
+    color: white;
+    padding: 1em .7em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    position: relative;
+    background-color: var(--bg, transparent);
+    border-radius: 6px;
+}
+
+.dropdown__list:has( :checked) {
+    --rows: 1fr;
+    --rotate: rotate(180deg);
+    --bg: #20336a;
+}
+
+.dropdown__list{
+    list-style: none;
+}
+
+.dropdown__check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown__arrow {
+    margin-left: auto;
+    transform: var(--rotate, 0);
+    transition: .2s transform;
+}
+
+.dropdown__content {
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+}
+
+.dropdown__sub {
+    overflow: hidden;
+
+}
+
+.dropdown__li {
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.dropdown__anchor {
+    padding: 1em 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown__link:hover {
+    color: #EB7207;
+}
+
+
+.imagenPrincipal {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imagenPrincipal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.contenedor-imagenTbh {
+    width: 385px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.imagenTbh {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.texto {
+    font-family: "Rubik", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    padding: 0 400px;
+    color: #23376d;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta {
+    position: relative;
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 80px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.tarjeta h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    transition: transform 0.5s ease-out;
+}
+
+.tarjeta:hover h1 {
+    transform: translateY(-50%);
+}
+
+.tarjeta img {
+    width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-dos {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 80px;
+    color: #23376d;
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+}
+
+.tarjeta-dos h1 {
+    color: #23376d;
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+}
+
+.tarjeta-dos img {
+    width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contenedor-patrocinadores {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-patrocinadores img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/*Contenedor del footer*/
+.contenedor-footer {
+    background-color: #16233F;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Textos al final del footer*/
+.contenedor-footer h1 {
+    color: white;
+    font-size: 50px;
+    font-family: rubik-medium, sans-serif;
+}
+
+.contenedor-footer h2 {
+    color: white;
+    font-size: 22px;
+    font-family: rubik-medium, sans-serif;
+}
+
+.contenedor-footer h3 {
+    color: white;
+    font-size: 28px;
+    font-family: rubik-medium, sans-serif;
+}
+
+/*Div de explicación del rediseño*/
+.texto-rediseno {
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    font-family: rubik-medium, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Iconos de redes sociales de Kinal*/
+.iconos-redes {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.iconos-redes a {
+    display: inline-block;
+}
+
+.iconos-redes img {
+    width: 60px;
+    height: auto;
+    padding-left: 10px;
+}
+
+/*Tarjetas de colores jovenes beneficiados*/
+.tarjetas-beneficiados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.tarjeta-jovenes {
+    flex: 1;
+    margin: 10px;
+    padding: 50px;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+}
+
+.tarjeta-jovenes h1 {
+    font-size: 80px;
+}
+
+.tarjeta-jovenes p {
+    color: white;
+    font-size: 24px;
+    font-family: "Rubik", sans-serif;
+}
+
+/*Imagen deslizante de Kinal para apoyar*/
+.contenedorimg {
+    position: relative;
+    padding: 75px;
+}
+
+.imagen {
+    width: 800px;
+    height: 400px;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.textoDonar {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -50%);
+    background-color: transparent;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.textoDonar h1 {
+    font-size: 48px;
+    color: white;
+}
+
+.textoDonar h2 {
+    font-size: 48px;
+    color: #00C0FF;
+}
+
+.textoDonar p {
+    font-size: 28px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+.textoDonar button {
+    background-color: white;
+    color: #16233F;
+    font-size: 24px;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contenedorimg:hover .imagen {
+    transform: translateX(-450px);
+}
+
+.contenedorimg:hover .textoDonar {
+    opacity: 1;
+}
+
+/*Sección de blog*/
+.image-container {
+    display: flex;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.image-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.image-container a {
+    font-family: "Rubik", sans-serif;
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.image-container:hover a{
+    color: #44688D;
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Rubik:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #a433fd, #21d2fe);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.imgCont {
+    display: flex;
+    justify-content: center;
+}
+
+.imgCont img {
+    min-width: 1300px;
+    min-height: 650px;
+}
+
+.navMenu a {
+    color: #ffc107;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.numVentana {
+    color: #ffc107;
+    font-size: 26px;
+    text-decoration: none;
+    margin-left: 25px;
+    text-align: center;
+}
+
+
+.titulo a {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+    margin-left: 25px;
+    background-color: transparent;
+}
+
+.titulo a:hover {
+    color: #26cdfe;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    color: #31337d;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+p {
+    text-align: justify;
+    color: white;
+}
+
+main {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #31337d;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 34px;
+    color: rgb(228, 237, 63);
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    justify-content: center;
+}
+
+.contenido {
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido img {
+    max-width: 800px;
+    max-height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.recuadro {
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+}
+
+.footer p {
+    justify-content: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    text-align: center;
+}

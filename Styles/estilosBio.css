@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,75,200..1000;1,6..12,75,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    background-color: #0c1315;
+    justify-content: center;
+    height: 1vh;
+}
+
+/*diseño del header*/
+.header {
+    background-color: #0c1315;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+/*Icono del header*/
+.header .icono-header {
+    height: 70px;
+    width: auto;
+}
+
+/*Titulo en el header*/
+.header .titulo {
+    color: #e2f1f8;
+    font-family: "Archivo Black", sans-serif;
+}
+
+/*Lista de opciones en biografia*/
+.header .lista {
+    list-style: none;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.header .lista li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .lista li:hover {
+    transform: scale(1.1);
+}
+
+.header .lista a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.header .lista li a:hover {
+    color: #625361;
+}
+
+.contenido {
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.contenido h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: #6f47c2 ;
+    font-size: 54px;
+}
+
+.contenido p {
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    font-size: 22px;
+    text-align: justify;
+}
+
+h2 {
+    font-family: "Archivo Black", sans-serif;
+    color: #6f47c2 ;
+    font-size: 54px;
+    text-align: center;
+}
+
+.recuadros {
+    margin-left: 350px;
+    margin-right: 350px;
+    display: flex;
+}
+
+.recuadro {
+    background-color: #6f47c2;
+    flex: 1;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.recuadro h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+}
+
+.recuadro p {
+    font-family: "Archivo Black", sans-serif;
+    color: black;
+    font-size: 22px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.recuadro img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    justify-content: flex-end;
+}
+
+.recuadroFooter {
+    background-color: transparent;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.recuadroFooter h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.recuadroFooter h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 22px;
+    margin: 0;
+}
